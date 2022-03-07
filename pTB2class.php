@@ -8,6 +8,7 @@
 </head>
 <body>
     <form action="pTB2class.php" method="post">
+        <h1>Giải Phương Trình Bậc 2</h1>
         <div>Nhập a<br>
             <input type="text" name="a"/>
         </div>
@@ -29,16 +30,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $a = $_POST ['a'];
     $b = $_POST ['b'];
     $c = $_POST ['c'];
-}
+
 if($a==''||$b==''||$c==''){
     echo "bạn chưa nhập đủ số liệu!!";
     return;
-}
+}}
 class PTB2 {
   // Properties
-  public $a;
-  public $b;
-  public $c;
+  private $a;
+  private $b;
+  private $c;
 
   // Methods
   public function a_b_c($a , $b , $c ) {
@@ -69,12 +70,12 @@ class PTB2 {
     if ($delta> 0) {
         $x1 = (- $b + sqrt ( $delta )) / (2 * $a);
         $x2 = (- $b - sqrt ( $delta )) / (2 * $a);
-        echo ("Phương trình có 2 nghiệm là: " . "x1 = " . $x1 . " và x2 = " . $x2);
+        echo (" > 0 <br>Phương trình có 2 nghiệm là: " . "x1 = " . $x1 . " và x2 = " . $x2);
     } else if ($delta==0) {
         $x1 = (- $b / (2 * $a));
-        echo ("Phương trình có nghiệm kép: x1 = x2 = " . $x1);
+        echo (" = 0 <br>Phương trình có nghiệm kép: x1 = x2 = " . $x1);
     } else {
-        echo ("Phương trình vô nghiệm!");
+        echo (" < 0 <br>Phương trình vô nghiệm!");
     }
 }
 }

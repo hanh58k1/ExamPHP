@@ -26,6 +26,11 @@ echo"<br>";
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $chieuDai = $_POST ['chieuDai'];
     $chieuRong = $_POST ['chieuRong'];
+
+if($chieuDai==''||$chieuRong==''){
+    echo "bạn chưa nhập đủ số liệu!!";
+    return;
+}
 }
 class HCN {
   public $chieuDai;
